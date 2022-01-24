@@ -21,7 +21,7 @@ class webViewActivity : AppCompatActivity() {
 
         news_view = findViewById(R.id.news_view)
         healines = intent.getSerializableExtra("data") as NewsHealines
-        dialog = ProgressDialog(this)
+        dialog = ProgressDialog(this, R.style.AppCompatAlertDialogStyle)
 
         news_view?.apply {
             settings.javaScriptEnabled = true
@@ -31,6 +31,11 @@ class webViewActivity : AppCompatActivity() {
         news_view?.loadUrl(healines?.getUrl())
 
 
+    }
+
+    fun dialogSettings(){
+        dialog!!.setTitle(R.string.loading)
+        dialog!!.setIcon(R.drawable.icon_dialog)
     }
 
 
