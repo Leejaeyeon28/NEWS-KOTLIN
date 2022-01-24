@@ -1,6 +1,8 @@
 package com.example.newskotlin.Models
 
-class NewsHealines {
+import java.io.Serializable
+
+class NewsHealines : Serializable {
 
     private var source: Source? = null
     private var author = ""

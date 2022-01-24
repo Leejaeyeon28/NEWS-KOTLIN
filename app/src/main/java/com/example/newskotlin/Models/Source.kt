@@ -1,6 +1,8 @@
 package com.example.newskotlin.Models
 
-class Source {
+import java.io.Serializable
+
+class Source : Serializable {
 
     private var id = ""
     private var name = ""

@@ -1,11 +1,12 @@
 package com.example.newskotlin.Models
 
-class NewsApiResponse {
+import java.io.Serializable
 
+
+class NewsApiResponse : Serializable {
     private var status: String? = null
     private var totalResults = 0
     private var articles: List<NewsHealines>? = null
-
 
     fun getStatus(): String? {
         return status
@@ -30,7 +31,5 @@ class NewsApiResponse {
     fun setArticles(articles: List<NewsHealines?>?) {
         this.articles = articles as List<NewsHealines>?
     }
-
-
 
 }
